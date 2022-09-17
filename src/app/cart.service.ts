@@ -21,6 +21,12 @@ export class CartService {
     return this.items;
   }
 
+  deleteItem(product: Product) {
+    const index = this.items.indexOf(product);
+    this.items.splice(index, 1);
+    return this.items;
+  }
+
   getShippingPrices() {
     return this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
   }
