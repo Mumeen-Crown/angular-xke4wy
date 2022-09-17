@@ -1,0 +1,5 @@
+<h3>Shipping Prices</h3>
+<div *ngFor = "let shippingCost of shippingCosts | async" class="shipping-item">
+  <span>{{shippingCost.type}}</span>
+  <span>{{shippingCost.price}}</span>
+</div>
